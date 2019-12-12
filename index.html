@@ -1,0 +1,169 @@
+<!doctype html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <h1>Travail pratique #3</h1>
+        <h2>Identification</h2>
+        <p>Ce travail a été fait par Zakaria Sbai-Chkirid (<span style="color: red">MATRICULE</span>)</p>
+    
+        <!-- Partie 1 -->
+        <h2>Partie 1: Formulaire de conversion (2,5 pts)</h2>
+        <div>
+           <span>Valeur :</span> 
+            <input id="p1Input" type="text">
+           <span id="p1Result">Résultat ici</span>
+           <br>
+        </div>
+        <div class="spacing-top-5">
+            <button id="poucesCm" class="p1-button">Pouces vers cm</button>
+            <button id="cmPouces" class="p1-button">Cm vers pouces</button>
+            <button id="celciusFarenheit" class="p1-button">Celcius vers Farenheit</button>
+            <button id="farenheitCelcius" class="p1-button">Farenheit vers Celsius</button>
+        </div>
+    
+        <!-- Partie 2 -->
+        <h2>Partie 2: Affichage dans la page Web (contrôlé par Javascript - 3 pts)</h2>
+        <div class="spacing-top-5">
+            <p class="inline-block">Nom :</p>
+            <input id="nom" type="text">
+            <br>
+            <p class="inline-block">Niveau (1 à 6):</p>
+            <input id="niveau" type="text">
+            <button id="afficherPartieDeux">Afficher partie 2</button>
+            <p id="p2error" class="error-red"></p>
+            <div>
+                <h2 id="p2Result">Affichage ici</h2>
+            </div>
+        </div>
+    
+        <!-- Partie 3 -->
+        <div id="partie3">
+            <h2>Partie 3: Affichage du menu, animation des images et calcul du coût (5 pts)</h2>
+            <div class="menu float-left" >
+                <div class="title">Menu</div>
+                <div class="menu-title">Entrée</div>
+                <div key="entree" class="options" style="display: none;">
+                    <div class="menu-item" key="escargot">
+                        <div class="seperator inline-block">
+                            &nbsp;
+                        </div>
+                        <span>Escargot</span>
+                    </div>
+                    <div class="menu-item" key="salade_verte">
+                        <div class="seperator inline-block">
+                            &nbsp;
+                        </div>
+                        <span>Salade verte</span>
+                    </div>
+                    <div class="menu-item" key="salade_cesar">
+                        <div class="seperator inline-block">
+                            &nbsp;
+                        </div>
+                        <span>Salade César</span>
+                    </div>
+                </div>
+                <div class="menu-title">Principal</div>
+                <div key="principal" class="options" style="display: none;">
+                    <div class="menu-item" key="spaghetti">
+                        <div class="seperator inline-block">
+                            &nbsp;
+                        </div>
+                        <span>Spaghetti</span>
+                    </div>
+                    <div class="menu-item" key="steak">
+                        <div class="seperator inline-block">
+                            &nbsp;
+                        </div>
+                        <span>Steak</span>
+                    </div>
+                    <div class="menu-item" key="pizza">
+                        <div class="seperator inline-block">
+                            &nbsp;
+                        </div>
+                        <span>Pizza</span>
+                    </div>
+                </div>
+                <div class="menu-title">Dessert</div>
+                <div key="dessert" class="options" style="display: none;">
+                    <div class="menu-item" key="creme_glacee">
+                        <div class="seperator inline-block">
+                            &nbsp;
+                        </div>
+                        <span>Crème glacée</span>
+                    </div>
+                    <div class="menu-item" key="pouding">
+                        <div class="seperator inline-block">
+                            &nbsp;
+                        </div>
+                        <span>Pouding</span>
+                    </div>
+                    <div class="menu-item" key="gateau">
+                        <div class="seperator inline-block">
+                            &nbsp;
+                        </div>
+                        <span>Gâteau</span>
+                    </div>
+                </div>
+                <div class="menu-title">Boisson</div>
+                <div key="boisson" class="options" style="display: none;">
+                    <div class="menu-item" key="cafe_the">
+                        <div class="seperator inline-block">
+                            &nbsp;
+                        </div>
+                        <span>Café / Thé</span>
+                    </div>
+                    <div class="menu-item" key="boisson_gazeuse">
+                        <div class="seperator inline-block">
+                            &nbsp;
+                        </div>
+                        <span>Boisson gazeuse</span>
+                    </div>
+                </div>
+            </div>
+            <div id="yourChoice" style="float: left;">
+                <h4><strong>Votre choix</strong></h4>
+                <div id="section-entree" class="item">
+                    <p>Entrée:</p>
+                    <img width="75" height="75" src="images/vide.jpg">
+                    <p class="price"></p>
+                </div>
+                <div id="section-principal" class="item">
+                    <p>Principal:</p>
+                    <img width="75" height="75" src="images/vide.jpg">
+                    <p class="price"></p>
+                </div>
+                <div id="section-dessert" class="item">
+                    <p>Dessert:</p>
+                    <img width="75" height="75" src="images/vide.jpg">
+                    <p class="price"></p>
+                </div>
+                <div id="section-boisson" class="item">
+                    <p>Boisson:</p>
+                    <img width="75" height="75" src="images/vide.jpg">
+                    <p class="price"></p>
+                </div>
+            </div>
+            <div id="factureSection">
+                <button id="calculerFacture">Cliquer ici pour calculer la facture</button>
+                <p id="receipt-section" style="display: none;">Total: <span id="total"></span>$ taxes: <span id="taxes"></span>$ = <span id="grand-total"></span>$</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+.spacing-top-5 {
+    margin-top: 5px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.float-left {
+    float: left;
+}
+
+.error-red {
+    color: red;
+}
+
+#p2Result {
+    color: green
+}
+
+ul li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.open-item {
+    margin-left: 5px;
+}
+
+.menu {
+    background:  #e5eecc;
+    max-width: 200;
+    min-width: 150px;
+    cursor: pointer;
+}
+
+.selected {
+    background:  #d5ccee;
+}
+
+.options div div {
+    width: 10px;
+}
+
+#yourChoice {
+    float: left;
+}
+
+#yourChoice div {
+    margin: 0 0 0 5px;
+}
+
+#yourChoice h4 {
+    margin: 0;
+}
+
+.item {
+    float: left;
+    margin-right: 30px !important;
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 0px;
+}
+
+#calculerFacture {
+    margin-top: 15px;
+}
+
+#partie3 {
+    border: 1px solid;
+    padding: 1px;
+    height: 450px;
+}
+
+#main {
+    border: 1px solid;
+    padding: 0 2px 2px 2px;
+}
+
+#factureSection {
+    clear: both;
+    margin-left: 150px;
+}
